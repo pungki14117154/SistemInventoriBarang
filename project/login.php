@@ -19,7 +19,7 @@ if($r==1){
 	else if($a['role']=="gudang"){
 		$_SESSION['username']=$id;
 		$_SESSION['status']="login";
-		header("location:admin/owner_stok.php");
+		header("location:admin/#");
 	}
 	else if($a['role']=="kasir"){
 		$_SESSION['username']=$id;
