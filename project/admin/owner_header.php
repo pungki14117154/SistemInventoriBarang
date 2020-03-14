@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php
-		include '../connect.php';
-	?>
 
 	<title>PAMAN TOYS (OWNER)</title>
 	<style>
@@ -51,8 +48,8 @@
 		<ul>
 			<li><a href="owner_pelanggan.php">Pelanggan</a></li>
 			<li><a href="owner_stok.php">Stok</a></li>
-			<li><a href="#">Menu 3</a></li>
-			<li><a href="#">Menu 4</a></li>
+			<li><a href="#">Barang Masuk</a></li>
+			<li><a href="#">Barang Keluar</a></li>
 		</ul>
 
 	</div>

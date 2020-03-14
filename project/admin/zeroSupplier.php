@@ -1,58 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title>PAMAN TOYS (OWNER)</title>
 	<style>
-		.header{
-			width: 100%;
-			height: 100%;
-			margin: 0.25%;
-			background-color: blue;
-			text-align: center;
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-
-		.header a{
-			font-size: 40px;
-			font-style: bold;
-			color: white;
-		}
-
-		.left{
-			float: left;
-			margin: 0.25%;
-			width: 24%;
-			height: 100%;
-			border: 1px solid black;
-		}
-
-		.content{
-			width: 74%;
-			margin: 0.25%;
-			float: right;
-			overflow: auto;
-			padding: 0.25%;
-			border: 1px solid black;
-		}
-
-		.container-btn-tambah{
-			margin-top : 10px;
-			float : right;
-		}
-
-/*Dari sini style untuk popup*/
-
 		.popup-tambah {
-  			display: none; /* Hidden by default */
+  			display: block; /* Hidden by default */
   			position: fixed; /* Stay in place */
   			z-index: 1; /* Sit on top */
   			left: 0;
   			top: 0;
   			width: 100%; /* Full width */
   			height: 100%; /* Full height */
-  			overflow: auto; /* Enable scroll if needed */
   			background-color: rgb(0,0,0); /* Fallback color */
   			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   			padding-top: 60px;
@@ -80,7 +37,7 @@
 		}
 
 		.close:hover {
-  			color: red;
+  			color: blue;
   			cursor: pointer;
 		}
 
@@ -97,17 +54,29 @@
 
 <body>
 
-	<div class="header">
-		<a>PAMAN TOYS</a>
+		<div id="tambah" class="popup-tambah">
+		<form class="container-form" action="tambah_supplier.php" method="post">
+
+			<div class="close-container">
+				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Home">Home</span>
+			</div>
+
+			<div class="" style="padding: 16px">
+				<label><b>Nama supplier</b></label>
+      			<input type="text" placeholder="Isikan Nama" name="nmsupplier" required>
+
+      			<label><b>Alamat</b></label>
+      			<input type="text" placeholder="Isikan Alamat" name="alamat" required>
+
+      			<label><b>Nomon Telepon</b></label>
+      			<input type="text" placeholder="Maksimal 15 digit" name="no" maxlength="15">
+        
+      			<button type="submit">Tambah</button>				
+			</div>
+			
+		</form>		
 	</div>
 
-	<div class="left">
-		<ul>
-			<li><a href="gudang_stok.php">Stok</a></li>
-			<li><a href="#">Barang Keluar</a></li>
-			<li><a href="gudang_barangmasuk.php">Barang Masuk</a></li>
-			<li><a href="gudang_supplier.php">Suppliers</a></li>
-		</ul>
+</body>
 
-	</div>
-
+</html>

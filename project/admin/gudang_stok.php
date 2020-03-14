@@ -9,13 +9,13 @@
 			<th>ID Barang</th>
 			<th>Nama</th>
 			<th>Jumlah</th>
-			<th>ID Supplier</th>
-			<th>OPSI</th>
+			<th>Nama Supplier</th>
+			<th>Id Supplier</th>
 		</tr>
 	<?php 
 		include '../connect.php';
 		$no = 1;
-		$data = mysqli_query($koneksi,"select id_barang, Nama, jumlah_barang, id_supplier from stok");
+		$data = mysqli_query($koneksi,"select id_barang, Nama, jumlah_barang, supplier.nama_supplier, supplier.id_supplier from stok join supplier on stok.id_supplier=supplier.id_supplier");
 
 		while($d = mysqli_fetch_array($data)){
 	?>
@@ -23,21 +23,47 @@
 				<td><?php echo $no++; ?></td>
 				<td><?php echo $d['id_barang']; ?></td>
 				<td width="50%"><?php echo $d['Nama']; ?></td>
-				<td><?php echo $d['jumlah_barang']; ?></td>
+				<td width="40%"><?php echo $d['jumlah_barang']; ?></td>
+				<td><?php echo $d['nama_supplier']; ?></td>
 				<td><?php echo $d['id_supplier']; ?></td>
-				<td width="50%">
-					<a href="#?id=<?php echo $d['id']; ?>">EDIT</a>
-					<a href="#?id=<?php echo $d['id']; ?>">HAPUS</a>
-				</td>
 			</tr>
 	<?php 
 		}
 	?>
 
 	</table>
+
+		<div class="container-btn-tambah">
+			<button onclick="document.getElementById('tambah').style.display='block'">Tambah stok / barang masuk</button>
+		</div>
+
 	</div>
 
 
+<!-- popup tambah barang -->
+
+	<div id="tambah" class="popup-tambah">
+		<form class="container-form" action="tambah_stok.php" method="post">
+
+			<div class="close-container">
+				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Close">&times;</span>
+			</div>
+
+			<div class="" style="padding: 16px">
+				<label><b>Nama Barang</b></label>
+      			<input type="text" placeholder="Isikan nama barang" name="nama" required>
+
+      			<label><b>Jumlah</b></label>
+      			<input type="integer" placeholder="Isikan jumlah barang" name="jumlah" required>
+
+      			<label><b>Nama Supplier</b></label>
+      			<input type="text" placeholder="Nama Supplier" name="supplier" required>
+        
+      			<button type="submit">Tambah</button>				
+			</div>
+			
+		</form>		
+	</div>
 
 <?php
 	include 'footer.php';
