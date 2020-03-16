@@ -26,22 +26,35 @@
 		$intjumlah = intval($jumlah);
 		$sum = $intjumlah + $jml;
 		// sampe sini
-
-			if ($r2==0){
-				mysqli_query($koneksi, "insert into stok values ('', '$nama', '$intjumlah', '$d2')" );
-
-			}else if ($r2>=1){
-				mysqli_query($koneksi,"update stok set jumlah_barang='$sum' where id_barang='$d4' ");
-
-			}
-
 		$tgl = date('Y/m/d');
 
-		mysqli_query($koneksi, "insert into barang_masuk values ('', '$nama', '$intjumlah', '$tgl', '$d4', '$d2') ");
-		echo "<script>alert('Berhasil Menambahkan Barang');window.location='gudang_stok.php'</script>";
+			if ($r2>=1){
+				mysqli_query($koneksi,"update stok set jumlah_barang='$sum' where id_barang='$d4' ");
+
+				mysqli_query($koneksi, "insert into barang_masuk values ('', '$nama', '$intjumlah', '$tgl', '$d4', '$d2') ");
+
+				echo "<script>alert('Berhasil Menambahkan Barang');window.location='gudang_stok.php'</script>";
+
+
+			}else if($r2==0){
+				mysqli_query($koneksi, "insert into stok values ('', '$nama', '$intjumlah', '$d2')" );
+				$query3 = mysqli_query($koneksi, "select * from stok where Nama='$nama' and id_supplier='$d2'");
+
+				$d5 = mysqli_fetch_assoc($query3);
+				$d6 = $d5['id_barang'];
+
+				mysqli_query($koneksi, "insert into barang_masuk values ('', '$nama', '$intjumlah', '$tgl', '$d6', '$d2') ");
+
+				echo "<script>alert('Berhasil Menambahkan Barang');window.location='gudang_stok.php'</script>";
+
+			}		
+
+			else{
+				echo "<script>alert('Unexpected Error');window.location='gudang_stok.php'</script>";
+			}
 
 	}else{
-		echo "<script>alert('Gagal Menambahkan Barang');window.location='gudang_stok.php'</script>";
+		echo "<script>alert('Unexpected Error');window.location='gudang_stok.php'</script>";
 
 	}
 

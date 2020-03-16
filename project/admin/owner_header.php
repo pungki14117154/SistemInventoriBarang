@@ -3,6 +3,7 @@
 <head>
 
 	<title>PAMAN TOYS (OWNER)</title>
+	<link href="owner.css" type="text/css" rel="stylesheet"/>
 	<style>
 		.header{
 			width: 100%;

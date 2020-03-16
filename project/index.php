@@ -2,16 +2,26 @@
 <html>
 <head>
 	<title>Paman Toys</title>
+	
 	<?php include 'connect.php'; ?>
-	<style>
-	</style>
+	<link href="login.css" type="text/css" rel="stylesheet"/>
+
 </head>
 
 <body>
+	<div class="header">
+		<a>PAMAN TOYS</a>
+	</div>
+	
+	<div class="kotak_login">
 	<form action="login.php" method="post">
+		<label>Username :</label>
+		<br>
 		<input type="text" class="form-control" placeholder="ID" name="id">
+		<br>
+		<label>Password :</label>
+		<br>
 		<input type="password" class="form-control" placeholder="Password" name="pw">
-		<input type="submit" value="Login">
+		<input type="submit" class="tombol_submit"  value="LOGIN">
 	</form>
-
 </body>

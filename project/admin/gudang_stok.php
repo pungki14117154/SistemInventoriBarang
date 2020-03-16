@@ -47,17 +47,18 @@
 
 			<div class="close-container">
 				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Close">&times;</span>
+				<h1 style="font-size: 40px">Tambah Barang</h1>
 			</div>
 
-			<div class="" style="padding: 16px">
+			<div class="content-container" style="padding: 16px; font-size: 30px">
 				<label><b>Nama Barang</b></label>
-      			<input type="text" placeholder="Isikan nama barang" name="nama" required>
+      			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Isikan nama barang" name="nama" required>
 
       			<label><b>Jumlah</b></label>
       			<input type="integer" placeholder="Isikan jumlah barang" name="jumlah" required>
 
       			<label><b>Nama Supplier</b></label>
-      			<input type="text" placeholder="Nama Supplier" name="supplier" required>
+      			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Nama Supplier" name="supplier" required>
         
       			<button type="submit">Tambah</button>				
 			</div>

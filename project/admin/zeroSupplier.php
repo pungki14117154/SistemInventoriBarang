@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
+  <link href="gudang.css" type="text/css" rel="stylesheet"/>
+<!-- 	<style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    }
 		.popup-tambah {
-  			display: block; /* Hidden by default */
+  			display: block; /* no Hidden */
   			position: fixed; /* Stay in place */
   			z-index: 1; /* Sit on top */
   			left: 0;
@@ -13,6 +17,7 @@
   			background-color: rgb(0,0,0); /* Fallback color */
   			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   			padding-top: 60px;
+        background-image: url('bg.png');
 		}
 
 		.container-form {
@@ -33,7 +38,7 @@
   			position: absolute;
   			right: 25px;
   			color: black;
-  			font-size: 35px;
+        font-size: 35px;
 		}
 
 		.close:hover {
@@ -44,26 +49,28 @@
 		input{
   			width: 100%;
   			padding: 12px;
+        font-size: 30px;
   			margin: 8px 0 8px 0px;
   			border: 1px solid black;
   			box-sizing: border-box;
 		}
 
-	</style>
+	</style> -->
 </head>
 
 <body>
 
-		<div id="tambah" class="popup-tambah">
+		<div id="tambah" class="popup-tambah" style="display: block;">
 		<form class="container-form" action="tambah_supplier.php" method="post">
 
 			<div class="close-container">
-				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Home">Home</span>
+				<span onclick="window.location='gudang_stok.php'" class="close" title="Home">&times;</span>
+        <h1 style="font-size: 40px">Tambah Supplier</h1>
 			</div>
 
-			<div class="" style="padding: 16px">
+			<div class="content-container" style="padding: 16px; font-size: 30px;">
 				<label><b>Nama supplier</b></label>
-      			<input type="text" placeholder="Isikan Nama" name="nmsupplier" required>
+      			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Isikan Nama" name="nmsupplier" required>
 
       			<label><b>Alamat</b></label>
       			<input type="text" placeholder="Isikan Alamat" name="alamat" required>
