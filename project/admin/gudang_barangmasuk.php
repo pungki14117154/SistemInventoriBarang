@@ -3,6 +3,7 @@
 ?>
 
 	<div class="content">
+	<h2>Data Barang Masuk</h2>
 	<table border="1">
 		<tr>
 			<th>NO</th>

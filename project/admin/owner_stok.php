@@ -3,6 +3,7 @@
 ?>
 
 	<div class="content">
+	<h2>Data Stok barang</h2>
 	<table border="1">
 		<tr>
 			<th>NO</th>

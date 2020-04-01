@@ -74,14 +74,16 @@ h2{
 	font-size: 30px;
     font-weight: 500;
 	padding-bottom: 5px;
-	padding-top: 0px;
+	padding-left: 35%;
+	display: flex;
+	margin-top:-55px;
 	border-top: 3px solid #006D7C;
 	border-bottom: 3px solid #006D7C;
 	background: rgba(255, 255, 255, 0.9);
 }
 
 table{
-	position: relative;
+	position: block;
 	border-collapse: collapse;
 	width: 80%;
 	max-width: 100%;
