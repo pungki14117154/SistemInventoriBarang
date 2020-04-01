@@ -16,7 +16,7 @@
 		<ul>
 			<li><a href="owner_pelanggan.php">Pelanggan</a></li>
 			<li><a href="owner_stok.php">Stok</a></li>
-			<li><a href="#">Barang Masuk</a></li>
+			<li><a href="owner_barangmasuk.php">Barang Masuk</a></li>
 			<li><a href="#">Barang Keluar</a></li>
 			<li><a href="owner_supplier.php">Supplier</a></li>
 		</ul>
