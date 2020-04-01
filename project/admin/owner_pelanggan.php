@@ -29,6 +29,9 @@
 	?>
 
 	</table>
+		<div class="container-btn-unduh">
+			<button onclick="document.getElementById('').style.display='block'">Unduh Laporan</button>
+		</div>
 	</div>
 
 
