@@ -3,7 +3,7 @@
 ?>
 
 	<div class="content">
-	<h2>Data Barang Masuk</h2>
+	<h2>Data Barang Keluar</h2>
 	<table border="1">
 		<tr>
 			<th>NO</th>
@@ -46,7 +46,9 @@
 		<form class="container-form" action="tambah_bkeluar.php" method="post">
 
 			<div class="close-container">
-				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Close">&times;</span>
+				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Close">
+					<input type = "image" src="close.png" alt="Close" class="btnx"/>
+				</span>
 				<h1 style="font-size: 40px">Tambah Barang Keluar</h1>
 			</div>
 

@@ -10,7 +10,9 @@
 		<form class="container-form" action="tambah_supplier.php" method="post">
 
 			<div class="close-container">
-				<span onclick="window.location='gudang_stok.php'" class="close" title="Home">&times;</span>
+				<span onclick="window.location='gudang_supplier.php'" class="close" title="Home">
+				<input type = "image" src="close.png" alt="Close" class="btnx"/>
+			</span>
         <h1 style="font-size: 40px">Tambah Supplier</h1>
 			</div>
 

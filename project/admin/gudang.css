@@ -68,7 +68,7 @@ body{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-image: url('bg.png');
+	background-image: url('bg.png') ;
     padding-top: 10px;
 }
 
@@ -86,16 +86,21 @@ body{
     padding-bottom: 25px;
   }
 
-.close {
+.close{
     position: absolute;
     right: 25px;
-    color: black;
-    font-size: 35px;
+	width: 60px;
+	height: 50px;
+	border:0px;
+}
+
+.btnx{
+	border: 0ex;
 }
 
 .close:hover {
-    color: red;
-    cursor: pointer;
+	opacity: 60%;
+	transform: scale(0.75);
 }
 
 .content-container button{
