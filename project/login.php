@@ -18,7 +18,7 @@ if($r==1){
 		header("location:admin/gudang_stok.php");
 	}
 	else if($a['role']=="kasir"){
-		header("location:admin/#");
+		header("location:admin/kasir_pelanggan.php");
 	}
 	else{
 		echo "<script>alert('Id atau Password Salah');window.location='index.php'</script>";
