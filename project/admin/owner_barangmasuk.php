@@ -4,6 +4,13 @@
 
 	<div class="content">
 	<h2>Data Barang Masuk</h2>
+
+	<form action="owner_cari.php" method="get">
+		<div>
+			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang masuk ..." name="cari_bm">	
+		</div>
+	</form>
+
 	<table border="1">
 		<tr>
 			<th>NO</th>
@@ -16,8 +23,12 @@
 	<?php 
 		include '../connect.php';
 		$no = 1;
-		$data = mysqli_query($koneksi,"select id_barang, nama_barang, jumlah, tgl_masuk, id_supplier from barang_masuk");
-
+		if (isset($_GET['cari_bm'])){
+			$cari_bm = $_GET['cari_bm'];
+			$data = mysqli_query($koneksi,"select id_barang, nama_barang, jumlah, tgl_masuk, id_supplier from barang_masuk where nama_barang like '%$cari_bm%' ");
+		}else{
+			$data = mysqli_query($koneksi,"select id_barang, nama_barang, jumlah, tgl_masuk, id_supplier from barang_masuk");
+		}
 		while($d = mysqli_fetch_array($data)){
 	?>
 			<tr>
