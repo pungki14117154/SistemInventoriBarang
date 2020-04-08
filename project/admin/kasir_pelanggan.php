@@ -6,7 +6,8 @@
 	<h2>Data Pelanggan</h2>
 
 	<form action="kasir_cari.php" method="get">
-		<div>
+		<div class="cari">
+			<h3>Cari: </h3>
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari pelanggan ..." name="cari_p">	
 		</div>
 	</form>
@@ -52,7 +53,9 @@
 		<form class="container-form" action="tambah_pelanggan.php" method="post">
 
 			<div class="close-container">
-				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Close">&times;</span>
+				<span onclick="document.getElementById('tambah').style.display='none'" class="close" title="Close">
+				<input type = "image" src="close.png" alt="Close" class="btnx"/>
+				</span>
 				<h1 style="font-size: 40px">Tambah Pelanggan</h1>
 			</div>
 
@@ -63,7 +66,7 @@
       			<label><b>Tipe</b></label>
       			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Tipe Pelanggan" name="tipe" required>
         
-      			<button type="submit">Tambah Pelanggan</button>				
+      			<button type="submit">Tambah</button>				
 			</div>
 			
 		</form>		

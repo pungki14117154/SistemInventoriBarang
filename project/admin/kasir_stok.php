@@ -6,7 +6,8 @@
 	<h2>Data Stok Barang</h2>
 
 	<form action="kasir_cari.php" method="get">
-		<div>
+		<div class="cari">
+			<h3>Cari: </h3>
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s">	
 		</div>
 	</form>

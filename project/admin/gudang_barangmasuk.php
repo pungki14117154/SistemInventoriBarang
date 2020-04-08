@@ -6,7 +6,8 @@
 	<h2>Data Barang Masuk</h2>
 
 	<form action="gudang_cari.php" method="get">
-		<div>
+	<div class="cari">
+			<h3>Cari: </h3>
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang masuk ..." name="cari_bm">	
 		</div>
 	</form>

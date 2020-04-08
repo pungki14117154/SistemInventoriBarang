@@ -5,12 +5,13 @@
 	<div class="content">
 	<h2>Data Stok Barang</h2>
 
-
-	<div>
-		<form action="gudang_cari.php" method="get">
+	<form action="gudang_cari.php" method="get">
+		<div class="cari">
+			<h3>Cari: </h3>
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s">	
-		</form>
-	</div>
+
+		</div>
+	</form>
 
 
 	<table border="1">
