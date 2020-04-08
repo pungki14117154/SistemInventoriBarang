@@ -13,7 +13,7 @@
 
 	if ($r==0){
 
-		echo "<script>alert('Pelanggan Belum Terdaftar. ');window.location='gudamg_barangkeluar.php'</script>";
+		echo "<script>alert('Pelanggan Belum Terdaftar. ');window.location='gudang_barangkeluar.php'</script>";
 
 	}else{
 
