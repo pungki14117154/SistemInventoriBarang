@@ -11,6 +11,7 @@
 
 	<div class="header">
 		<a>PAMAN TOYS</a>
+		<button onclick="window.location.href=''">Logout</button>
 	</div>
 
 	<div class="left">
