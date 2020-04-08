@@ -10,9 +10,6 @@
 		<form action="gudang_cari.php" method="get">
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s">	
 		</form>
-
-		<a href="lap_stok.php">Download Laporan Stok</a>
-
 	</div>
 
 
