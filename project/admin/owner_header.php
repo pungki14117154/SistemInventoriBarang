@@ -4,6 +4,14 @@
 
 	<title>PAMAN TOYS (OWNER)</title>
 	<link href="owner.css" type="text/css" rel="stylesheet"/>
+
+	<!-- Fungsi untuk disable back -->
+	<script type="text/javascript">
+        history.pushState(null, null, location.href);
+    	window.onpopstate = function () {
+        	history.go(1);
+    	};
+    </script>
 </head>
 
 <body>
