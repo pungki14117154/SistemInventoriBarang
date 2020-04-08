@@ -11,7 +11,7 @@
 
 	<div class="header">
 		<a>PAMAN TOYS</a>
-		<button onclick="window.location.href=''">Logout</button>
+		<button onclick="window.location.href='../index.php'">Logout</button>
 	</div>
 
 	<div class="left">
