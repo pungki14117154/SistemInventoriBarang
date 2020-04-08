@@ -45,7 +45,7 @@
 
 	</table>
 		<div class="container-btn-unduh">
-			<button onclick="document.getElementById('').style.display='block'">Unduh Laporan</button>
+			<button onclick="window.location.href='lap_stok.php'">Unduh Laporan</button>
 		</div>
 	</div>
 
