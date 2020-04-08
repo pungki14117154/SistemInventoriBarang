@@ -5,11 +5,16 @@
 	<div class="content">
 	<h2>Data Stok Barang</h2>
 
-	<form action="gudang_cari.php" method="get">
-		<div>
+
+	<div>
+		<form action="gudang_cari.php" method="get">
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s">	
-		</div>
-	</form>
+		</form>
+
+		<a href="lap_stok.php">Download Laporan Stok</a>
+
+	</div>
+
 
 	<table border="1">
 		<tr>
