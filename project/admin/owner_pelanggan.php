@@ -2,11 +2,12 @@
 	include 'owner_header.php';
 ?>
 
-	<div class="content">
+	<div class="content"> 
 	<h2>Data Pelanggan</h2>
 
 	<form action="owner_cari.php" method="get">
-		<div>
+		<div class="cari">
+			<h3>Cari: </h3>
 			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari pelanggan ..." name="cari_p">	
 		</div>
 	</form>
@@ -43,7 +44,7 @@
 		<div class="container-btn-unduh">
 			<button onclick="document.getElementById('').style.display='block'">Unduh Laporan</button>
 		</div>
-	</div>
+</div>
 
 
 
