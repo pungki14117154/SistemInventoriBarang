@@ -20,7 +20,7 @@ $pdf->SetLineWidth(0);
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',14);
 $pdf->ln(1);
-$pdf->Cell(17,0.7,"Laporan Stok",0,10,'C');
+$pdf->Cell(17,0.7,"Laporan Barang Keluar",0,10,'C');
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(5,0.7,"Di cetak pada tanggal : ".date("d/m/Y"),0,0,'C');
@@ -28,25 +28,25 @@ $pdf->ln(1);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(1, 0.8, 'NO', 1, 0, 'C');
 $pdf->Cell(2, 0.8, 'ID Barang', 1, 0, 'C');
-$pdf->Cell(6, 0.8, 'Nama Barang', 1, 0, 'C');
-$pdf->Cell(3, 0.8, 'Jumlah', 1, 0, 'C');
-$pdf->Cell(4, 0.8, 'Supplier', 1, 0, 'C');
-$pdf->Cell(2, 0.8, 'ID Supplier', 1, 1, 'C');
+$pdf->Cell(7, 0.8, 'Nama Barang', 1, 0, 'C');
+$pdf->Cell(2, 0.8, 'Jumlah', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'Tanggal Keluar', 1, 0, 'C');
+$pdf->Cell(3, 0.8, 'ID Pelanggan', 1, 1, 'C');
 $pdf->SetFont('Arial','',10);
 $no=1;
-$query=mysqli_query($koneksi, "select * from stok join supplier on stok.id_supplier=supplier.id_supplier");
+$query=mysqli_query($koneksi, "select id_barang, nama_barang, jumlah, tgl_keluar, id_pelanggan from barang_keluar");
 while($data=mysqli_fetch_array($query)){
 	$pdf->Cell(1, 0.8, $no , 1, 0, 'C');
 	$pdf->Cell(2, 0.8, $data['id_barang'],1, 0, 'C');
-	$pdf->Cell(6, 0.8, $data['Nama'], 1, 0,'C');
-	$pdf->Cell(3, 0.8, $data['jumlah_barang'],1, 0, 'C');
-	$pdf->Cell(4, 0.8, $data['nama_supplier'], 1, 0,'C');
-	$pdf->Cell(2, 0.8, $data['id_supplier'],1, 1, 'C');
+	$pdf->Cell(7, 0.8, $data['nama_barang'], 1, 0,'C');
+	$pdf->Cell(2, 0.8, $data['jumlah'],1, 0, 'C');
+	$pdf->Cell(3, 0.8, $data['tgl_keluar'], 1, 0,'C');
+	$pdf->Cell(3, 0.8, $data['id_pelanggan'],1, 1, 'C');
 
 	$no++;
 }
 
-$pdf->Output("laporan_stok.pdf","I");
+$pdf->Output("laporan_barang_keluar.pdf","I");
 
 ?>
 

@@ -42,7 +42,7 @@
 
 	</table>
 		<div class="container-btn-unduh">
-			<button onclick="document.getElementById('').style.display='block'">Unduh Laporan</button>
+			<button onclick="window.location.href='lap_pelanggan.php';alert('Laporan disimpan di Download/Daftar_Pelanggan.pdf') ">Unduh Laporan</button>
 		</div>
 </div>
 
