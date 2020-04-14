@@ -7,8 +7,8 @@
 
 	<form action="owner_cari.php" method="get">
 		<div class="cari">
-			<h3>Cari: </h3>
-			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang masuk ..." name="cari_bm">	
+			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang masuk ..." name="cari_bm">	
+			<input type="submit" class="tombol_submit"  value="cari">
 		</div>
 	</form>
 
