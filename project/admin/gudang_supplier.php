@@ -2,13 +2,22 @@
 	include 'gudang_header.php';
 ?>
 
+	<div class="left">
+		<ul>
+			<li><a class="noactive" href="gudang_stok.php">Stok</a></li>
+			<li><a class="noactive" href="gudang_barangkeluar.php">Barang Keluar</a></li>
+			<li><a class="noactive" href="gudang_barangmasuk.php">Barang Masuk</a></li>
+			<li><a class="active" href="gudang_supplier.php">Suppliers</a></li>
+		</ul>
+	</div>
+
 	<div class="content">
 	<h2>Data Supplier</h2>
 
 	<form action="gudang_cari.php" method="get">
 	<div class="cari">
-			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari pelanggan ..." name="cari_sup">	
-			<input type="submit" class="tombol_submit"  value="cari">
+			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari pelanggan ..." name="cari_sup" required>	
+			<input type="submit" class="tombol_submit" value="cari">
 		</div>
 	</form>
 

@@ -2,12 +2,22 @@
 	include 'owner_header.php';
 ?>
 
+	<div class="left">
+		<ul>
+			<li><a class="noactive" href="owner_pelanggan.php">Pelanggan</a></li>
+			<li><a class="active" href="owner_stok.php">Stok</a></li>
+			<li><a class="noactive" href="owner_barangmasuk.php">Barang Masuk</a></li>
+			<li><a class="noactive" href="owner_barangkeluar.php">Barang Keluar</a></li>
+			<li><a class="noactive" href="owner_supplier.php">Supplier</a></li>
+		</ul>
+	</div>
+
 	<div class="content">
 	<h2>Data Stok barang</h2>
 
 	<form action="owner_cari.php" method="get">
 		<div class="cari">
-			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s">	
+			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s" required>	
 			<input type="submit" class="tombol_submit"  value="cari">
 		</div>
 	</form>

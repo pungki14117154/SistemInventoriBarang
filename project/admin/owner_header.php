@@ -20,15 +20,3 @@
 		<a>PAMAN TOYS</a>
 		<button onclick="window.location.href='../index.php'">Logout</button>
 	</div>
-
-	<div class="left">
-		<ul>
-			<li><a href="owner_pelanggan.php">Pelanggan</a></li>
-			<li><a href="owner_stok.php">Stok</a></li>
-			<li><a href="owner_barangmasuk.php">Barang Masuk</a></li>
-			<li><a href="owner_barangkeluar.php">Barang Keluar</a></li>
-			<li><a href="owner_supplier.php">Supplier</a></li>
-		</ul>
-
-	</div>
-

@@ -2,12 +2,21 @@
 	include 'gudang_header.php';
 ?>
 
+	<div class="left">
+		<ul>
+			<li><a class="noactive" href="gudang_stok.php">Stok</a></li>
+			<li><a class="active" href="gudang_barangkeluar.php">Barang Keluar</a></li>
+			<li><a class="noactive" href="gudang_barangmasuk.php">Barang Masuk</a></li>
+			<li><a class="noactive" href="gudang_supplier.php">Suppliers</a></li>
+		</ul>
+	</div>
+
 	<div class="content">
 	<h2>Data Barang Keluar</h2>
 
 	<form action="gudang_cari.php" method="get">
 		<div class="cari">
-			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang keluar ..." name="cari_bk">	
+			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang keluar ..." name="cari_bk" required>	
 			<input type="submit" class="tombol_submit"  value="cari">	
 		</div>
 	</form>
@@ -70,7 +79,7 @@
       			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Isikan nama barang" name="nama" required>
 
       			<label><b>Jumlah</b></label>
-      			<input type="integer" placeholder="Isikan jumlah barang" name="jumlah" required>
+      			<input type="number" min="0" placeholder="Isikan jumlah barang" name="jumlah" required>
 
       			<label><b>Nama Supplier</b></label>
       			<input type="text" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Nama Suppier" name="supplier" required>

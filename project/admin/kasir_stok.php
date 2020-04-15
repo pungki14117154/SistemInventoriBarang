@@ -2,12 +2,19 @@
 	include 'kasir_header.php';
 ?>
 
+	<div class="left">
+		<ul>
+			<li><a class="noactive" href="kasir_pelanggan.php">Pelanggan</a></li>
+			<li><a class="active" href="kasir_stok.php">Stok</a></li>
+		</ul>
+	</div>
+
 	<div class="content">
 	<h2>Data Stok Barang</h2>
 
 	<form action="kasir_cari.php" method="get">
 		<div class="cari">
-			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s">	
+			<input type="text" class="hint" value="" onChange="javascript:this.value=this.value.toUpperCase();" placeholder="Cari barang ..." name="cari_s" required>	
 			<input type="submit" class="tombol_submit"  value="cari">
 		</div>
 	</form>
