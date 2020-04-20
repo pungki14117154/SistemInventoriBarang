@@ -24,7 +24,7 @@
       			<input type="text" placeholder="Isikan Alamat" name="alamat" required>
 
       			<label><b>Nomon Telepon</b></label>
-      			<input type="text" placeholder="Maksimal 15 digit" name="no" maxlength="15">
+      			<input type="text" placeholder="Maksimal 15 digit" name="no" maxlength="15" required>
         
       			<button type="submit">Tambah</button>				
 			</div>

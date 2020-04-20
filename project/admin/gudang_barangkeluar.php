@@ -35,7 +35,7 @@
 		$no = 1;
 		if (isset($_GET['cari_bk'])){
 			$cari_bk = $_GET['cari_bk'];
-			$data = mysqli_query($koneksi,"select id_barang, nama_barang, jumlah, tgl_keluar, id_pelanggan from barang_keluar where nama_barang like '$cari_bk' ");
+			$data = mysqli_query($koneksi,"select id_barang, nama_barang, jumlah, tgl_keluar, id_pelanggan from barang_keluar where nama_barang like '%$cari_bk%' ");
 		}else{
 			$data = mysqli_query($koneksi,"select id_barang, nama_barang, jumlah, tgl_keluar, id_pelanggan from barang_keluar");
 		}
