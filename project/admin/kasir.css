@@ -145,7 +145,7 @@ input{
 /*pop-up css end here wkwk*/
 
 
-ul{
+.left ul{
 	list-style-type: none;
 	width: 100%;
 	margin: 0px auto;
@@ -155,18 +155,26 @@ ul{
 	font-weight: 500;
 }
 
-ul li a{
+.left li a{
 	display: block;
 	color: #006D7C;
 	text-decoration: none;
 	padding: 25px;
-	background-color:rgba(186, 228, 232, 0.7);
 	border: 1px solid #006D7C;
 	border-left-width: 2px;
 	border-right-width: 2px;
+	transition: all ease-in-out 250ms;
 }
 
-ul li a:hover{
+.left li a:hover:not(.active) {
+	background-color: rgb(149, 199, 209);
+}
+
+.noactive{
+	background-color:rgba(186, 228, 232, 0.7);
+}
+
+.active{
 	background-color: rgb(149, 199, 209);
 }
 
