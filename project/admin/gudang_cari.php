@@ -20,4 +20,9 @@ if (isset($_GET['cari_sup'])){
 header("location:gudang_supplier.php?cari_sup=$cari_sup");
 }
 
+if (isset($_GET['cari_p'])){
+	$cari_p=$_GET['cari_p'];
+	header("location:gudang_pelanggan.php?cari_p=$cari_p");
+}
+
 ?>

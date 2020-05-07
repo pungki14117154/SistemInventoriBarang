@@ -8,6 +8,7 @@
 			<li><a class="noactive" href="gudang_barangkeluar.php">Barang Keluar</a></li>
 			<li><a class="active" href="gudang_barangmasuk.php">Barang Masuk</a></li>
 			<li><a class="noactive" href="gudang_supplier.php">Suppliers</a></li>
+			<li><a class="noactive" href="gudang_pelanggan.php">Pelanggan</a></li>
 		</ul>
 	</div>
 
